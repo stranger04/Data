@@ -1,0 +1,16 @@
+public class EmployeeDaoImplTest 
+{
+	static EmployeeDao empdao=null; 
+@BeforeClass
+	public static void setUp()
+	{
+		empdao=new EmployeeDaoImpl();
+	} 
+@Test
+	public void addEmpTest() throws EmployeeException
+	{
+		Assert.assertEquals(111, empdao.addEmployee(
+				new Employee(111,"aaa",1111.0F,
+						LocalDate.now())));
+	} 
+} 
